@@ -1,0 +1,202 @@
+---
+// src/components/Industries.astro
+---
+
+<section id="industries" class="bg-canvas border-b border-hairline py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-mono text-[10px] uppercase tracking-wider text-link mb-3 inline-block">
+        SECTORS & EXPERTISE
+      </span>
+      <h2 class="font-sans text-2xl md:text-3xl lg:text-[36px] font-semibold tracking-tight text-ink mb-4" style="letter-spacing: -1.2px;">
+        Industries we serve.
+      </h2>
+      <p class="font-sans text-sm md:text-base text-body leading-relaxed">
+        From advanced tech systems to heavy industrial operations, we source, qualify, and place high-performing candidates across a wide range of industry sectors.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Sector Card 1: IT & Tech -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">IT & Tech</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Sourcing elite technical talent, from software development and DevOps to artificial intelligence and product management.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Software Engineers</li>
+            <li>• Cloud & DevOps Specialists</li>
+            <li>• Product Managers</li>
+            <li>• AI/ML Engineers</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Tech & Development</span>
+      </div>
+
+      <!-- Sector Card 2: Manufacturing -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.64 8.38a14.98 14.98 0 0 0-3.07 10.99 15.1 15.1 0 0 0 5.18-5v-1.22" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Manufacturing</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Partnering with heavy engineering, automotive, and textile plants to build reliable operations and management teams.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Plant Managers</li>
+            <li>• QA/QC Engineers</li>
+            <li>• Production Supervisors</li>
+            <li>• Operations Leads</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Operations & Heavy Industry</span>
+      </div>
+
+      <!-- Sector Card 3: Banking & Finance -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.5M4.5 21V10.5M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Banking & Finance</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Providing financial professionals, wealth managers, and certified accountants to leading banking and financial institutions.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Chartered Accountants</li>
+            <li>• Wealth Advisors</li>
+            <li>• Financial Analysts</li>
+            <li>• Branch Managers</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">BFSI & Accountancy</span>
+      </div>
+
+      <!-- Sector Card 4: Engineering -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.096 9.31 17.207a2.25 2.25 0 1 1-3.182-3.182l2.11-2.113m3.182 3.182a2.25 2.25 0 0 0 3.181-3.182l-2.11-2.113m-3.182 3.182a2.25 2.25 0 0 1-3.182-3.182l2.11-2.113m3.182 3.182 2.11-2.113a2.25 2.25 0 1 1 3.182 3.182l-2.11 2.113m-3.182-3.182V9a1.5 1.5 0 0 0-1.5-1.5H9m3 3V15m0-3h3" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Engineering</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Placing design, mechanical, structural, and electrical engineers in industrial and commercial utility projects.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Structural Engineers</li>
+            <li>• Site Supervisors</li>
+            <li>• CAD Draftsmen</li>
+            <li>• Project Directors</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Infrastructure & Design</span>
+      </div>
+
+      <!-- Sector Card 5: Healthcare -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Healthcare</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Supporting hospitals and pharmaceutical firms with qualified clinical, research, and sales professionals.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Hospital Administrators</li>
+            <li>• Clinical Researchers</li>
+            <li>• Nurses & Tech Staff</li>
+            <li>• Pharma Sales Managers</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Pharma & Medicine</span>
+      </div>
+
+      <!-- Sector Card 6: Retail -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Retail & E-commerce</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Assisting retail networks and e-commerce companies with store managers, logistics staff, and merchandising leads.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Store Operations Managers</li>
+            <li>• Digital Marketing Leads</li>
+            <li>• Retail Merchandisers</li>
+            <li>• E-commerce Directors</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">B2C & Digital Retail</span>
+      </div>
+
+      <!-- Sector Card 7: Logistics -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.02-1.372l1.016-4.067A1.125 1.125 0 0 1 4.47 12h11.06c.494 0 .933.324 1.086.793l1.016 4.067A1.125 1.125 0 0 1 16.625 18.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m9.75-3h.75a.75.75 0 0 1 .75.75v3.562c0 .414-.336.75-.75.75h-.75m0-5.062V12h-.75m.75 3.062c0-.775-.625-1.406-1.406-1.406H5.156C4.38 13.656 3.75 14.288 3.75 15.062v.188" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Logistics & Supply Chain</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Partnering with warehouse networks and transport systems to optimize regional distribution and coordination personnel.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Warehouse Supervisors</li>
+            <li>• Supply Chain Coordinators</li>
+            <li>• Logistics Analysts</li>
+            <li>• Fleet Operations Managers</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Distribution & Transport</span>
+      </div>
+
+      <!-- Sector Card 8: Corporate Training -->
+      <div class="card-marketing relative flex flex-col justify-between h-full">
+        <div>
+          <div class="text-link mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A5.905 5.905 0 0 1 8 3.443m12 1.568v-.178c0-1.611-1.306-2.917-2.917-2.917H6.917C5.306 2.118 4 3.424 4 5.035v.178m16 0a50.57 50.57 0 0 1 2.658.813A5.905 5.905 0 0 1 16 11.557m0-6.509v.178c0 1.611-1.306 2.917-2.917 2.917H10.917C9.306 10.965 8 9.659 8 8.048v-.178m8 0a48.536 48.536 0 0 1-8 0" />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[15px] font-semibold text-ink mb-2">Corporate Training & HR</h3>
+          <p class="font-sans text-xs text-body leading-relaxed mb-4">
+            Placing high-caliber HR executives, payroll leads, talent acquisition heads, and corporate training leads.
+          </p>
+          <ul class="space-y-1 text-[11px] font-mono text-mute">
+            <li>• Talent Sourcing Partners</li>
+            <li>• HR Managers & Executive Heads</li>
+            <li>• Compensation Analysts</li>
+            <li>• Learning & Development Trainers</li>
+          </ul>
+        </div>
+        <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Human Infrastructure</span>
+      </div>
+
+    </div>
+  </div>
+</section>
