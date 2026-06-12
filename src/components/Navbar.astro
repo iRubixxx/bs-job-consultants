@@ -1,0 +1,95 @@
+---
+// src/components/Navbar.astro
+---
+
+<header class="sticky top-0 z-50 w-full h-16 bg-canvas/80 border-b border-hairline backdrop-blur-md">
+  <div class="max-w-6xl mx-auto h-full px-6 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3 group">
+      <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary font-mono text-sm font-semibold tracking-tighter transition-transform group-hover:scale-105">
+        BS
+      </div>
+      <div class="flex flex-col">
+        <span class="font-sans font-semibold text-[15px] tracking-tight leading-none text-ink">BS JOB Consultants</span>
+        <span class="font-mono text-[9px] text-mute uppercase tracking-widest mt-1">Indore</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex items-center gap-1">
+      <a href="#home" class="font-sans text-xs font-medium text-body px-3 py-1.5 rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors">Home</a>
+      <a href="#about" class="font-sans text-xs font-medium text-body px-3 py-1.5 rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors">About Us</a>
+      <a href="#services" class="font-sans text-xs font-medium text-body px-3 py-1.5 rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors">Services</a>
+      <a href="#contact" class="font-sans text-xs font-medium text-body px-3 py-1.5 rounded-full hover:bg-canvas-soft-2 hover:text-ink transition-colors">Contact</a>
+    </nav>
+
+    <!-- Desktop CTA Buttons -->
+    <div class="hidden md:flex items-center gap-4">
+      <a href="tel:+917314225717" class="font-mono text-xs text-body hover:text-ink transition-colors">
+        0731-4225717
+      </a>
+      <a href="#contact" class="bg-primary text-on-primary font-sans text-xs font-semibold px-3 py-1.5 rounded-sm hover:bg-black transition-all transform active:scale-[0.98]">
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-1.5 rounded-sm hover:bg-canvas-soft-2 text-ink transition-colors focus:outline-none" aria-label="Toggle Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-x-0 top-[64px] z-40 bg-canvas border-b border-hairline translate-y-[-120%] transition-transform duration-300 ease-in-out md:hidden flex flex-col px-6 py-8 gap-6 shadow-lg">
+    <nav class="flex flex-col gap-4">
+      <a href="#home" class="mobile-nav-link font-sans text-base font-medium text-body hover:text-ink py-1.5 border-b border-hairline">Home</a>
+      <a href="#about" class="mobile-nav-link font-sans text-base font-medium text-body hover:text-ink py-1.5 border-b border-hairline">About Us</a>
+      <a href="#services" class="mobile-nav-link font-sans text-base font-medium text-body hover:text-ink py-1.5 border-b border-hairline">Services</a>
+      <a href="#contact" class="mobile-nav-link font-sans text-base font-medium text-body hover:text-ink py-1.5 border-b border-hairline">Contact</a>
+    </nav>
+    <div class="flex flex-col gap-4 mt-4">
+      <a href="tel:+917314225717" class="font-mono text-xs text-body hover:text-ink py-2 text-center border border-hairline rounded-sm">
+        Call: 0731-4225717
+      </a>
+      <a href="#contact" class="mobile-nav-link bg-primary text-on-primary font-sans text-sm font-semibold py-2.5 rounded-sm text-center hover:bg-black transition-all">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('.mobile-nav-link');
+
+  let isOpen = false;
+
+  function toggleMenu() {
+    isOpen = !isOpen;
+    if (isOpen) {
+      menu?.classList.remove('translate-y-[-120%]');
+      if (btn) {
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>`;
+      }
+    } else {
+      menu?.classList.add('translate-y-[-120%]');
+      if (btn) {
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>`;
+      }
+    }
+  }
+
+  btn?.addEventListener('click', toggleMenu);
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isOpen) toggleMenu();
+    });
+  });
+</script>

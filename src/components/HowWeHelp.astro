@@ -1,0 +1,205 @@
+---
+// src/components/HowWeHelp.astro
+---
+
+<section id="services" class="bg-canvas border-b border-hairline py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-mono text-[10px] uppercase tracking-wider text-link mb-3 inline-block">
+        OUR SERVICES
+      </span>
+      <h2 class="font-sans text-2xl md:text-3xl lg:text-[36px] font-semibold tracking-tight text-ink mb-4" style="letter-spacing: -1.2px;">
+        Designed to accelerate growth.
+      </h2>
+      <p class="font-sans text-sm md:text-base text-body leading-relaxed">
+        Whether you are a professional searching for your next career move, or an enterprise building high-performing teams, we deliver tailored recruitment services.
+      </p>
+
+      <!-- Tabs Toggle Button (Vercel-style tab layout) -->
+      <div class="inline-flex bg-canvas-soft-2 p-1 rounded-full border border-hairline mt-8">
+        <button id="tab-candidates" class="font-sans text-xs font-semibold px-6 py-2 rounded-full transition-all bg-canvas text-ink shadow-xs cursor-pointer focus:outline-none">
+          For Candidates
+        </button>
+        <button id="tab-employers" class="font-sans text-xs font-semibold px-6 py-2 rounded-full transition-all text-body hover:text-ink cursor-pointer focus:outline-none">
+          For Employers
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab Contents Wrapper -->
+    <div class="relative w-full">
+      <!-- Candidates Content (Visible by default) -->
+      <div id="content-candidates" class="transition-all duration-300 transform opacity-100 scale-100 block">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-link mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A5.905 5.905 0 0 1 8 3.443m12 1.568v-.178c0-1.611-1.306-2.917-2.917-2.917H6.917C5.306 2.118 4 3.424 4 5.035v.178m16 0a50.57 50.57 0 0 1 2.658.813A5.905 5.905 0 0 1 16 11.557m0-6.509v.178c0 1.611-1.306 2.917-2.917 2.917H10.917C9.306 10.965 8 9.659 8 8.048v-.178m8 0a48.536 48.536 0 0 1-8 0" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Career Sourcing</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Direct representation and job matching with the leading corporate groups in Indore and pan-India.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Placement Sourcing</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-link mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Resume Building</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Optimize your CV to clear modern Applicant Tracking Systems (ATS) and catch corporate recruiter interest.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">CV Optimization</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-link mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.75-2.906m-.75 2.906a30.12 30.12 0 0 1-11 0m0 0a5.97 5.97 0 0 1-.75-2.906m-.75 2.906A9.09 9.09 0 0 0 3.74 18.24a3 3 0 0 0 4.683-2.719m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c2.17 0 4.207-.576 5.963-1.584A6.062 6.062 0 0 0 18 18.722Zm-12-1a5.97 5.97 0 0 0-.75-2.906M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-6.75 3.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm13.5 0a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Interview Coaching</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Simulated standard HR rounds and domain technical evaluations with constructive, data-driven feedback.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Interview Preparation</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-link mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a3 3 0 0 0-3-3H9.75a3 3 0 0 0-3 3v5.25m6-5.25a3 3 0 0 1 3-3h.75a3 3 0 0 1 3 3v5.25m-16.5-3h18M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Salary Benchmarking</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Insightful industry scale details that help you negotiate competitive, fair market value packages.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Market Mapping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Employers Content (Hidden by default) -->
+      <div id="content-employers" class="transition-all duration-300 transform opacity-0 scale-95 hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-violet mb-4 animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.75-2.906m-.75 2.906a30.12 30.12 0 0 1-11 0m0 0a5.97 5.97 0 0 1-.75-2.906m-.75 2.906A9.09 9.09 0 0 0 3.74 18.24a3 3 0 0 0 4.683-2.719m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c2.17 0 4.207-.576 5.963-1.584A6.062 6.062 0 0 0 18 18.722Zm-12-1a5.97 5.97 0 0 0-.75-2.906M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-6.75 3.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm13.5 0a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Manpower Placement</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">End-to-end recruitment sourcing across tech, operations, sales, finance, and engineering divisions.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Bulk & Lateral Hiring</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-violet mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Executive Search</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Retained sourcing to identify and secure highly critical leadership talent for your organization.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Leadership Sourcing</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-violet mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Skill Verification</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Pre-screened candidates evaluated for cultural fit, soft skills, and core functional competencies.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Candidate Screening</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card-marketing bg-canvas relative flex flex-col justify-between h-full">
+            <div>
+              <div class="text-violet mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <h3 class="font-sans text-sm font-semibold text-ink mb-2">Corporate Training</h3>
+              <p class="font-sans text-xs text-body leading-relaxed">Tailored learning and soft skills programs to keep your internal workforce competitive and productive.</p>
+            </div>
+            <span class="font-mono text-[9px] text-mute uppercase mt-6 tracking-wider">Training Solutions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tabCandidates = document.getElementById('tab-candidates');
+  const tabEmployers = document.getElementById('tab-employers');
+  const contentCandidates = document.getElementById('content-candidates');
+  const contentEmployers = document.getElementById('content-employers');
+
+  function showCandidates() {
+    // Buttons styling
+    tabCandidates?.classList.add('bg-canvas', 'text-ink', 'shadow-xs');
+    tabCandidates?.classList.remove('text-body', 'hover:text-ink');
+    tabEmployers?.classList.remove('bg-canvas', 'text-ink', 'shadow-xs');
+    tabEmployers?.classList.add('text-body', 'hover:text-ink');
+
+    // Contents visibility
+    if (contentCandidates && contentEmployers) {
+      contentCandidates.classList.remove('hidden');
+      setTimeout(() => {
+        contentCandidates.classList.remove('opacity-0', 'scale-95');
+        contentCandidates.classList.add('opacity-100', 'scale-100');
+      }, 10);
+      contentEmployers.classList.add('hidden', 'opacity-0', 'scale-95');
+      contentEmployers.classList.remove('opacity-100', 'scale-100');
+    }
+  }
+
+  function showEmployers() {
+    // Buttons styling
+    tabEmployers?.classList.add('bg-canvas', 'text-ink', 'shadow-xs');
+    tabEmployers?.classList.remove('text-body', 'hover:text-ink');
+    tabCandidates?.classList.remove('bg-canvas', 'text-ink', 'shadow-xs');
+    tabCandidates?.classList.add('text-body', 'hover:text-ink');
+
+    // Contents visibility
+    if (contentCandidates && contentEmployers) {
+      contentEmployers.classList.remove('hidden');
+      setTimeout(() => {
+        contentEmployers.classList.remove('opacity-0', 'scale-95');
+        contentEmployers.classList.add('opacity-100', 'scale-100');
+      }, 10);
+      contentCandidates.classList.add('hidden', 'opacity-0', 'scale-95');
+      contentCandidates.classList.remove('opacity-100', 'scale-100');
+    }
+  }
+
+  tabCandidates?.addEventListener('click', showCandidates);
+  tabEmployers?.addEventListener('click', showEmployers);
+</script>
