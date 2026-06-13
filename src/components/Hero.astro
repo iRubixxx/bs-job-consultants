@@ -2,15 +2,53 @@
 // src/components/Hero.astro
 ---
 
-<section id="home" class="relative overflow-hidden bg-canvas-soft border-b border-hairline py-20 md:py-28 flex flex-col items-center justify-center text-center">
-  <!-- Mesh Gradient Background -->
-  <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
-    <div class="absolute w-[600px] h-[600px] rounded-full blur-[140px] top-[-150px] left-[5%]" style="background: radial-gradient(circle, rgba(0,124,240,0.15) 0%, transparent 70%);"></div>
-    <div class="absolute w-[600px] h-[600px] rounded-full blur-[140px] top-[-100px] right-[10%]" style="background: radial-gradient(circle, rgba(121,40,202,0.15) 0%, transparent 70%);"></div>
-    <div class="absolute w-[600px] h-[600px] rounded-full blur-[140px] bottom-[-150px] left-[30%]" style="background: radial-gradient(circle, rgba(255,77,77,0.1) 0%, transparent 70%);"></div>
+<section id="home" class="relative overflow-hidden py-24 md:py-36 flex flex-col items-center justify-center text-center bg-canvas-soft">
+  <!-- 1. Floating 3D Orbs (Behind Frosted Glass) -->
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
+    <!-- Orb 1: Sky Blue Sphere -->
+    <div class="absolute w-[320px] h-[320px] rounded-full animate-float-slow top-[10%] left-[8%]" 
+         style="background: radial-gradient(circle at 35% 35%, #bae6fd 0%, #0ea5e9 50%, #0284c7 100%); filter: blur(4px); box-shadow: inset -10px -10px 30px rgba(0,0,0,0.15), 0 20px 40px rgba(2,132,199,0.12);"></div>
+    
+    <!-- Orb 2: Violet/Purple Sphere -->
+    <div class="absolute w-[380px] h-[380px] rounded-full animate-float-delayed bottom-[5%] right-[5%]" 
+         style="background: radial-gradient(circle at 35% 35%, #ddd6fe 0%, #7c3aed 50%, #5b21b6 100%); filter: blur(6px); box-shadow: inset -12px -12px 35px rgba(0,0,0,0.2), 0 25px 50px rgba(124,58,237,0.12);"></div>
+    
+    <!-- Orb 3: Cyan/Mint Sphere -->
+    <div class="absolute w-[250px] h-[250px] rounded-full animate-float-reverse top-[35%] right-[30%]" 
+         style="background: radial-gradient(circle at 35% 35%, #cffafe 0%, #06b6d4 50%, #0891b2 100%); filter: blur(5px); box-shadow: inset -8px -8px 25px rgba(0,0,0,0.15), 0 15px 30px rgba(6,182,212,0.1);"></div>
   </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
+  <!-- 2. Frosted Glassmorphism Overlay (Blurs elements underneath) -->
+  <div class="absolute inset-0 z-10 bg-canvas-soft/40 backdrop-blur-[55px] border-b border-hairline"></div>
+
+  <!-- 3. Subtle Alignment Grid (Sits on top of the glass to anchor layout) -->
+  <div class="absolute inset-0 z-20 opacity-[0.03] pointer-events-none select-none" style="background-image: linear-gradient(rgba(23, 23, 23, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 23, 23, 0.4) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+  <style>
+    @keyframes float-slow {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(40px, -50px) scale(1.06); }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-50px, 30px) scale(0.95); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(30px, 40px) scale(1.04); }
+    }
+    .animate-float-slow {
+      animation: float-slow 24s infinite ease-in-out;
+    }
+    .animate-float-delayed {
+      animation: float-delayed 28s infinite ease-in-out;
+    }
+    .animate-float-reverse {
+      animation: float-reverse 26s infinite ease-in-out;
+    }
+  </style>
+
+  <div class="relative z-30 max-w-4xl mx-auto px-6 flex flex-col items-center">
     <!-- Eyebrow Banner -->
     <a href="#about" class="inline-flex items-center gap-2 bg-canvas border border-hairline hover:border-hairline-strong shadow-xs rounded-full px-3.5 py-1 mb-8 transition-all hover:scale-[1.01] active:scale-100">
       <span class="font-mono text-[10px] uppercase tracking-wider text-body flex items-center gap-1.5">

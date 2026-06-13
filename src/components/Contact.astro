@@ -158,10 +158,12 @@
   const successState = document.getElementById('form-success');
   const resetBtn = document.getElementById('form-reset-btn');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (!form) return;
+
     if (submitBtn) {
-      // Simulate submission loading states
+      // Show loading spinner
       submitBtn.innerHTML = `
         <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -172,11 +174,43 @@
       (submitBtn as HTMLButtonElement).disabled = true;
     }
 
-    setTimeout(() => {
-      form.classList.add('hidden');
-      successState?.classList.remove('hidden');
-      form.reset();
-    }, 1200);
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/bsjob123@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...data,
+          _subject: `Manpower/Manpower Inquiry (from ${data.name})`,
+          _captcha: "false"
+        })
+      });
+
+      if (response.ok) {
+        form.classList.add('hidden');
+        successState?.classList.remove('hidden');
+        form.reset();
+      } else {
+        throw new Error("Form submission endpoint returned error status.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Submission error. Please send your inquiry directly to bsjob123@gmail.com.");
+      if (submitBtn) {
+        submitBtn.innerHTML = `
+          Send Message
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+          </svg>
+        `;
+        (submitBtn as HTMLButtonElement).disabled = false;
+      }
+    }
   });
 
   resetBtn?.addEventListener('click', () => {
